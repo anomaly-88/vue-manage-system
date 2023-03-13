@@ -155,6 +155,14 @@ const routes: RouteRecordRaw[] = [
         },
         component: () => import(/* webpackChunkName: "403" */ '../views/403.vue'),
     },
+        {
+        path: '/:pathMatch(.*)*',
+        name: '404',
+        meta: {
+            title: '没有权限',
+        },
+        component: () => import(/* webpackChunkName: "404" */ '../views/404.vue'),
+    },
 ];
 
 const router = createRouter({
